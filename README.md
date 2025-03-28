@@ -1,6 +1,10 @@
 # BoostPhysioClinical
 **BoostPhysioClinical Application******
 
+**UML Class diagram. (10 marks)**
+
+https://github.com/user-attachments/assets/3d6069cf-2acf-4394-9141-8d877396baeb
+
 
 **System functions. (40 marks)**
 Key System Functions
