@@ -5,7 +5,7 @@
 **System functions. (40 marks)**
 Key System Functions
 
-**1. Add Physiotherapist**
+**1. Add Physiotherapist** 
 
 Purpose: To add a new physiotherapist to the clinic.
 Input: Physiotherapist details (ID, name, address, phone, areas of expertise).
