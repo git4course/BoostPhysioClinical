@@ -19,6 +19,7 @@ public void addPhysiotherapist(String id, String name, String address, String ph
     System.out.println("Physiotherapist added: " + name);
 }
 
+
 **2. Add Patient**
 
 Purpose: To register a new patient in the clinic.
@@ -64,7 +65,6 @@ public void bookAppointment(String patientId, String physiotherapistId, String t
     Patient patient = findPatientById(patientId);
     Physiotherapist physiotherapist = findPhysiotherapistById(physiotherapistId);
     Treatment treatment = findTreatmentByName(physiotherapist, treatmentName);
-    
     if (patient != null && physiotherapist != null && treatment != null) {
         Appointment appointment = new Appointment(dateTime, physiotherapist, treatment, patient);
         appointments.add(appointment);
