@@ -175,4 +175,60 @@ The above functions cover the core functionalities of the Boost Physio Clinic bo
 **User Interface:** Depending on your implementation, you may want to create a simple console-based or GUI interface to allow users to interact with these functions easily.
 
 **Conclusion**
+
 By implementing these system functions, you will fulfill a significant portion of the assignment requirements, demonstrating your ability to design and implement a substantial software artifact. If you have any specific questions about any of the functions or need further assistance, feel free to ask!
+
+
+
+**How to run the Boost Physio Clinic application, including how to create and execute the JAR file.**
+
+# Boost Physio Clinic System
+
+## Overview
+The Boost Physio Clinic system is designed to manage the booking of physiotherapy treatments for patients. This README provides instructions on how to set up, build, and run the application.
+
+## Prerequisites
+- Java Development Kit (JDK) 8 or higher
+- Apache Maven (if using Maven for project management)
+- An IDE (e.g., IntelliJ IDEA, Eclipse) or a text editor
+
+## Getting Started
+
+### Clone the Repository
+To get a local copy of the project, clone the repository using the following command:
+```bash
+git clone https://github.com/yourusername/boost-physio-clinic.git
+cd boost-physio-clinic
+
+**Build the Project**
+
+If you are using Maven, you can build the project by running:
+
+his command will compile the code, run tests, and package the application into a JAR file.
+
+**Create the Executable JAR**
+If you are using an IDE like IntelliJ IDEA, follow these steps to create an executable JAR file:
+
+Build the Project: Ensure there are no errors in your project.
+Export as JAR:
+Go to File > Project Structure.
+
+Under Artifacts, click the + button and select JAR > From modules with dependencies....
+Choose the main class (e.g., BoostPhysioClinicalApplication) and click OK.
+
+Click Apply and then OK to close the dialog.
+
+Build the Artifact: Go to Build > Build Artifacts..., select your JAR artifact, and click Build.
+
+Running the Application
+
+To run the application, use the following command in your terminal or command prompt:
+
+**java -jar target/booking-system-1.0-SNAPSHOT.jar**
+
+Make sure to replace target/booking-system-1.0-SNAPSHOT.jar with the actual path to your JAR file if it differs.
+
+**Features**
+Book appointments with physiotherapists.
+Cancel appointments.
+Generate reports on appointments and physiotherapist attendance.
