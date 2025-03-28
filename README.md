@@ -1,47 +1,46 @@
 # BoostPhysioClinical
-BoostPhysioClinical Application
+**BoostPhysioClinical Application******
 
 
-System functions. (40 marks)
-
+**System functions. (40 marks)**
 Key System Functions
-Add Physiotherapist
+
+**1. Add Physiotherapist**
 
 Purpose: To add a new physiotherapist to the clinic.
 Input: Physiotherapist details (ID, name, address, phone, areas of expertise).
 Output: Confirmation of the addition.
 Implementation: This function will create a new Physiotherapist object and add it to the clinic's list of physiotherapists.
-java
-Run
-Copy code
+
+ 
 public void addPhysiotherapist(String id, String name, String address, String phone, List<String> expertise) {
     Physiotherapist physiotherapist = new Physiotherapist(id, name, address, phone, expertise);
     physiotherapists.add(physiotherapist);
     System.out.println("Physiotherapist added: " + name);
 }
-Add Patient
+
+**2. Add Patient**
 
 Purpose: To register a new patient in the clinic.
 Input: Patient details (ID, name, address, phone).
 Output: Confirmation of the addition.
 Implementation: This function will create a new Patient object and add it to the clinic's list of patients.
-java
-Run
-Copy code
+ 
+ 
 public void addPatient(String id, String name, String address, String phone) {
     Patient patient = new Patient(id, name, address, phone);
     patients.add(patient);
     System.out.println("Patient added: " + name);
 }
-Add Treatment to Physiotherapist
+
+**3. Add Treatment to Physiotherapist**
 
 Purpose: To add a treatment option to a physiotherapist's offerings.
 Input: Physiotherapist ID, treatment name, duration.
 Output: Confirmation of the addition.
 Implementation: This function will find the specified physiotherapist and add a new Treatment object to their list of treatments.
-java
-Run
-Copy code
+
+ 
 public void addTreatmentToPhysiotherapist(String physiotherapistId, String treatmentName, int duration) {
     Physiotherapist physiotherapist = findPhysiotherapistById(physiotherapistId);
     if (physiotherapist != null) {
@@ -52,15 +51,15 @@ public void addTreatmentToPhysiotherapist(String physiotherapistId, String treat
         System.out.println("Physiotherapist not found.");
     }
 }
-Book Appointment
+
+**4. Book Appointment**
 
 Purpose: To book an appointment for a patient with a physiotherapist.
 Input: Patient ID, physiotherapist ID, treatment name, date and time.
 Output: Confirmation of the booking.
 Implementation: This function will create a new Appointment object and associate it with the patient and physiotherapist.
-java
-Run
-Copy code
+ 
+ 
 public void bookAppointment(String patientId, String physiotherapistId, String treatmentName, LocalDateTime dateTime) {
     Patient patient = findPatientById(patientId);
     Physiotherapist physiotherapist = findPhysiotherapistById(physiotherapistId);
@@ -75,15 +74,15 @@ public void bookAppointment(String patientId, String physiotherapistId, String t
         System.out.println("Booking failed: Invalid patient, physiotherapist, or treatment.");
     }
 }
-Cancel Appointment
+
+**5. Cancel Appointment**
 
 Purpose: To cancel an existing appointment.
 Input: Patient ID, appointment ID.
 Output: Confirmation of the cancellation.
 Implementation: This function will find the specified appointment and change its status to "cancelled".
-java
-Run
-Copy code
+ 
+ 
 public void cancelAppointment(String patientId, String appointmentId) {
     Appointment appointment = findAppointmentById(appointmentId);
     if (appointment != null && appointment.getPatient().getId().equals(patientId)) {
@@ -93,15 +92,15 @@ public void cancelAppointment(String patientId, String appointmentId) {
         System.out.println("Cancellation failed: Appointment not found or does not belong to the patient.");
     }
 }
-Check In Patient
+
+**6. Check In Patient**
 
 Purpose: To mark a patient as checked in for their appointment.
 Input: Appointment ID.
 Output: Confirmation of the check-in.
 Implementation: This function will find the specified appointment and change its status to "attended".
-java
-Run
-Copy code
+ 
+ 
 public void checkInPatient(String appointmentId) {
     Appointment appointment = findAppointmentById(appointmentId);
     if (appointment != null) {
@@ -111,15 +110,15 @@ public void checkInPatient(String appointmentId) {
         System.out.println("Check-in failed: Appointment not found.");
     }
 }
-Generate Report
+
+**7. Generate Report**
 
 Purpose: To generate a report of all appointments, including their status.
 Input: None.
 Output: A formatted report of appointments.
 Implementation: This function will iterate through the list of appointments and print the details.
-java
-Run
-Copy code
+ 
+ 
 public void generateReport() {
     System.out.println("Appointment Report:");
     for (Appointment appointment : appointments) {
